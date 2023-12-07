@@ -14,3 +14,4 @@ void PrintMenu(const std::string playlistTitle) {
     std::cout << "q - Quit" << std::endl;
     std::cout << std::endl;
 }
+
