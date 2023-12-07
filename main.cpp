@@ -128,3 +128,29 @@ break;
 
     return headNode; // Return the updated head node
 }
+int main() {
+   std::string playlistTitle;
+    std::cout << "Enter playlist's title:" << std::endl;
+    cout << endl;
+    std::getline(std::cin, playlistTitle);
+
+
+
+    PlaylistNode* headNode = nullptr;
+    char option;
+
+    do {
+        // Display the menu and get user input
+        PrintMenu(playlistTitle);
+        std::cout << "Choose an option:";
+        std::cin >> option;
+         
+        // Execute the chosen option
+        headNode = ExecuteMenu(option, playlistTitle, headNode);
+
+    } while (option != 'q');
+
+
+
+    return 0;
+}
